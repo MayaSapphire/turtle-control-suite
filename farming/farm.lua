@@ -40,10 +40,10 @@ function harvest()
             print("Place failed: " .. err)
         end
     elseif config.mode == 'block' then
-        if (blockData.name != config.targetBlock) then
+        if (blockData.name ~= config.targetBlock) then
             return true
         end
-        /* if blockData matches target block */
+        -- if blockData matches target block
         turtle.digDown()        
     end
     blocksMined = blocksMined + 1
